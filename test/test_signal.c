@@ -50,7 +50,6 @@ void test_noone_home(void)
 
     k_sem_init(&request, 0, 1);
     k_sem_init(&response, 0, 1);
-
     k_thread_create(&coop_thread,
                     coop_stack,
                     STACKSIZE,
@@ -126,6 +125,7 @@ void test_out_of_order(void)
 int main (void)
 {
     UNITY_BEGIN();
+    RUN_TEST(test_request);
     RUN_TEST(test_noop);
     RUN_TEST(test_out_of_order);
     RUN_TEST(test_noone_home);
