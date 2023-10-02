@@ -7,15 +7,15 @@ void signal_handle_calculation(struct k_sem *request,
     while (1)
     {
         // Wait until the request is sent, this means data.input is ready
-        printf("+ Waiting for request\n");
+        // printf("+ Waiting for request\n");
         k_sem_take(request, K_MSEC(2000));
-        printf("+ Handling calculation, %d is input\n", data->input);
+        // printf("+ Handling calculation, %d is input\n", data->input);
         data->output = data->input + 5;
 
         k_sleep(K_MSEC(1)); // wait to force a context switch to other thread
 
         // Output is set, so give up response flag to let other thread know
-        printf("+ Done with calculation\n");
+        // printf("+ Done with calculation\n");
         k_sem_give(response);
     }
 }
