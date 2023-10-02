@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <zephyr/kernel.h>
+#include <zephyr.h>
 #include <unity.h>
 #include "fifo.h"
 

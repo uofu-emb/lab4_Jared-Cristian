@@ -1,4 +1,4 @@
-#include <zephyr/kernel.h>
+#include <zephyr.h>
 #include <stdio.h>
 
 typedef struct request_msg {
