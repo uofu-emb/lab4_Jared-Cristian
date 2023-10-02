@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <zephyr.h>
+#include <zephyr/kernel.h>
 #include <arch/cpu.h>
 #include <unity.h>
 #include "signaling.h"

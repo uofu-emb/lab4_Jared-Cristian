@@ -1,5 +1,5 @@
 #pragma once
-#include <zephyr.h>
+#include <zephyr/kernel.h>
 
 struct signal_data {
     int32_t input;
