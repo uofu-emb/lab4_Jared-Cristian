@@ -27,13 +27,13 @@ int signal_request_calculate(struct k_sem *request,
     int err = 0;
 
     // send another request for data
-    printf("- Handoff to worker\n");
+    // printf("- Handoff to worker\n");
     k_sem_give(request);
 
     // wait for response data
-    printf("- Waiting for results\n");
+    // printf("- Waiting for results\n");
     err += k_sem_take(response, K_MSEC(2000));
-    printf("- Result ready %d\n", data->output);
+    // printf("- Result ready %d\n", data->output);
 
     return 0;
 }
