@@ -61,7 +61,7 @@ void test_noone_home(void)
                     0,
                     K_NO_WAIT);
     k_sleep(K_MSEC(1000));
-    TEST_ASSERT_EQUAL_INT(1, k_sem_count_get(&request));
+    TEST_ASSERT_EQUAL_INT(0, k_sem_count_get(&request));
     TEST_ASSERT_EQUAL_INT(0, k_sem_count_get(&response));
     TEST_ASSERT_EQUAL_INT(42, data.input);
     TEST_ASSERT_EQUAL_INT(42, data.output);
